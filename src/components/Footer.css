@@ -1,0 +1,122 @@
+.footer {
+  background: #0b0117;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  font-size: 14px;
+}
+
+/* Scroll to Top Button */
+/* Scroll to Top Button */
+.scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #a855f7, #ec4899); /* Gradient background */
+  border: none;
+  color: #ffffff;
+  padding: 12px 16px;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+  transition: all 0.3s ease-in-out;
+  display: none; /* Hide by default */
+  z-index: 1000; /* Ensure it stays above other elements */
+}
+
+/* Hover effect */
+.scroll-top:hover {
+  background: linear-gradient(135deg, #ec4899, #a855f7); /* Reverse gradient on hover */
+  color: #ffffff;
+  transform: translateY(-3px); /* Slight lift effect */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+}
+
+/* Pulse animation for attention */
+.scroll-top.active {
+  display: block;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+/* Keyframes for pulse effect */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Show button when scrolling */
+@media (min-width: 768px) {
+  .scroll-top {
+      display: block; /* Show on larger screens */
+  }
+}
+
+/* Responsive Footer */
+@media (max-width: 1024px) {
+  .footer {
+      font-size: 13px;
+      padding: 12px 0;
+  }
+
+  .scroll-top {
+      bottom: 15px;
+      right: 15px;
+      font-size: 18px;
+      padding: 8px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+      font-size: 12px;
+      padding: 10px 0;
+  }
+
+  .scroll-top {
+      bottom: 20px;
+      right: 15px;
+      font-size: 16px;
+      padding: 7px 9px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+      font-size: 11px;
+      padding: 8px 0;
+  }
+
+  .scroll-top {
+      bottom: 25px;
+      right: 10px;
+      font-size: 14px;
+      padding: 6px 8px;
+  }
+}
+
+/* Large Screens */
+@media (min-width: 1440px) {
+  .footer {
+      font-size: 16px;
+      padding: 18px 0;
+  }
+
+  .scroll-top {
+      font-size: 22px;
+      padding: 12px 14px;
+  }
+}

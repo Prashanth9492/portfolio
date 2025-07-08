@@ -1,0 +1,495 @@
+/* General Styles */
+#projects {
+  padding: 80px 20px;
+  text-align: center;
+  background:  #0c0218;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated background effect */
+#projects::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.2) 0%, transparent 70%);
+  animation: pulse 15s infinite ease-in-out;
+  z-index: 0;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.3; }
+  50% { transform: scale(1.2); opacity: 0.5; }
+}
+
+.subheading {
+  font-size: 15px;
+  color: #b0b0b0;
+  padding-right: 60px;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #a855f7;
+  animation: fadeInUp 1s ease-out 0.2s;
+  animation-fill-mode: both;
+}
+
+/* Divider Line */
+.divider {
+ display: none;
+}
+
+@keyframes expand {
+  0% { width: 0; }
+  100% { width: 150px; }
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 10px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Project Card */
+.project-card {
+  background: linear-gradient(145deg, #1e1a2a, #2a2438);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(168, 85, 247, 0.2);
+  border: 1px solid #a855f7;
+  width: 100%;
+  max-width: 400px;
+  height: 460px; /* Increased height to accommodate buttons */
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: slideUp 0.8s ease-out;
+  animation-fill-mode: both;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure content is spaced evenly */
+}
+
+.project-card:nth-child(1) { animation-delay: 0.2s; }
+.project-card:nth-child(2) { animation-delay: 0.4s; }
+.project-card:nth-child(3) { animation-delay: 0.6s; }
+.project-card:nth-child(4) { animation-delay: 0.8s; }
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(168, 85, 247, 0.4);
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.1);
+}
+
+h3 {
+  margin: 10px 0 8px; /* Reduced margin to save space */
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.project-description {
+  font-size: 16px;
+  color: #c0c0c0;
+  margin-bottom: 10px; /* Reduced margin to save space */
+  line-height: 1.5;
+  flex-grow: 1; /* Allow description to take available space */
+}
+
+.project-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Reduced gap for better fit */
+  margin-top: 10px; /* Reduced margin to save space */
+  margin-bottom: 10px; /* Added bottom margin for spacing */
+}
+
+/* Skill Tags */
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0; /* Adjusted margin to save space */
+}
+
+.skill-tag {
+  background: rgb(170, 89, 247);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 5px 8px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 3px 8px rgba(168, 85, 247, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-tag::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.skill-tag:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 5px 12px rgba(168, 85, 247, 0.5);
+  background: linear-gradient(90deg,  #a855f7);
+}
+
+.skill-tag:hover::before {
+  left: 100%;
+}
+
+.btn {
+  border: 2px solid #a855f7;
+  color: #ffffff;
+  padding: 10px 20px; /* Reduced padding for better fit */
+  border-radius: 50px;
+  text-decoration: none;
+  background: transparent;
+  font-weight: 600;
+  font-size: 14px; /* Slightly smaller font size */
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.3), transparent);
+  transition: 0.5s;
+}
+
+.btn:hover::after {
+  left: 100%;
+}
+
+.btn:hover {
+  background: #a855f7;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(168, 85, 247, 0.5);
+}
+
+/* Modal Popup */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1000;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.modal-content {
+  background: linear-gradient(145deg, #2a2438, #1e1a2a);
+  border: 2px solid #a855f7;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 750px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: scaleIn 0.4s ease-out;
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.modal-content h2 {
+  margin: 15px 0;
+  font-size: 30px;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.modal-details {
+  font-size: 18px;
+  color: #d0d0d0;
+  line-height: 1.7;
+  padding-bottom: 20px;
+}
+.modal-content .skills-tags {
+  margin-bottom: 30px; /* Added to create space below skill tags in modal */
+}
+
+.modal-content .btn2 {
+  margin-top: 20px; /* Added to create space above GitHub button */
+}
+
+
+.btn2 {
+  border: 2px solid #6b21a8;
+  color: #ffffff;
+  background: transparent;
+  padding: 12px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  
+}
+
+.btn2:hover {
+  background: #6b21a8;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(168, 85, 247, 0.5);
+}
+
+.btn2::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+
+.btn2:hover::after {
+  left: 100%;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 45px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #ffffff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #ff4d4d;
+  transform: rotate(90deg);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+  }
+
+  .project-card {
+    max-width: 350px;
+    height: 440px; /* Adjusted height for medium screens */
+  }
+
+  .project-image {
+    height: 180px;
+  }
+
+  .skills-tags {
+    gap: 8px;
+  }
+
+  .skill-tag {
+    font-size: 13px;
+    padding: 7px 14px;
+  }
+
+  .btn {
+    padding: 8px 18px; /* Adjusted padding */
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  #projects {
+    padding: 60px 15px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .subheading {
+    font-size: 18px;
+  }
+
+  .divider {
+    width: 120px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .project-card {
+    max-width: 90%;
+    height: 420px; /* Adjusted height for smaller screens */
+  }
+
+  .modal-content {
+    max-width: 85%;
+    padding: 30px;
+  }
+
+  .skills-tags {
+    gap: 7px;
+  }
+
+  .skill-tag {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  #projects {
+    padding: 50px 10px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .subheading {
+    font-size: 16px;
+  }
+
+  .divider {
+    width: 100px;
+    height: 2px;
+  }
+
+  .project-card {
+    height: 420px;         /* Increased height for mobile */
+    padding: 18px;
+    max-width: 100vw;      /* Make card take full width of viewport */        /* Ensure card stretches edge to edge */
+    margin-left: 0px;    /* Remove side padding if needed */
+    margin-right: -10px;
+    box-sizing: border-box;
+  }
+
+  .project-image {
+    height: 180px;
+  }
+
+  .btn, .btn2 {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+
+  .modal-content {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .modal-content h2 {
+    font-size: 24px;
+  }
+
+  .modal-details {
+    font-size: 16px;
+  }
+
+  .close-btn {
+    font-size: 35px;
+    top: 10px;
+    right: 15px;
+  }
+
+  .skills-tags {
+    gap: 6px;
+  }
+
+  .skill-tag {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+    .modal-content .skills-tags {
+    margin-bottom: 10px; /* Adjusted for mobile */
+  }
+
+  .modal-content .btn2 {
+    margin-top: 10px; /* Adjusted for mobile */
+  }
+}

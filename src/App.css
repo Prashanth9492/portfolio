@@ -1,0 +1,279 @@
+.App {
+  background-image: white;/* Adjust the path accordingly */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+  
+
+
+/* General Responsive Adjustments */
+@media (max-width: 1200px) {
+  .main-container {
+      gap: 100px;
+  }
+  .content h1 {
+      font-size: clamp(1rem, 2rem + 5vw, 3rem);
+      padding-right: 40px;
+  }
+
+  .about-container {
+      gap: 1rem;
+  }
+
+  .profile-image img {
+      width: 300px;
+      height: 330px;
+  }   
+
+  .user-info h1 {
+      font-size: 2rem;
+  }
+
+  .user-info p {
+      font-size: 1rem;
+      
+  }
+}
+
+@media (max-width: 992px) {
+  .main-container {
+      gap: 50px;
+  }
+
+  .about-container {
+      flex-direction: column;
+      text-align: center;
+      gap: 2rem;
+  }
+
+  .profile-image img {
+      width: 250px;
+      height: 280px;
+      align-items: center;
+  }
+
+  .user-info h1 {
+      font-size: 1.8rem;
+  }
+
+  .user-info p {
+      font-size: 0.9rem;
+  }
+
+  .skills-grid,
+  .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .main-container {
+      flex-direction: column;
+      gap: 2rem;
+      text-align: center;
+  }
+
+  .main-container .content {
+      width: 90%;
+  }
+
+  .main-container .image img {
+      width: 250px;
+      height: 250px;
+  }
+  .content .btn button{
+  width: 80%;
+  height: 7vh;
+  margin: 20px;
+  border-radius: 5px;
+  background-color: rgb(21, 65, 162);
+  color: rgb(226, 233, 233);
+  }
+
+  .content h1 {
+      font-size: 2rem;
+  }
+
+  .content .typewriter {
+      font-size: 1.5rem;
+  }
+
+  .content p {
+      width: 100%;
+      font-size: 1rem;
+      padding-left: 1px;
+  }
+
+  .about-container {
+      padding: 4rem 1rem;
+  }
+
+  .user-info h1 {
+      font-size: 1.5rem;
+  }
+
+  .user-info p {
+      font-size: 0.9rem;
+  }
+  .profile-image {
+      display: flex;
+      justify-content: center; /* Centers horizontally */
+      align-items: center; /* Centers vertically */
+      height: 200px; /* Full viewport height (adjust as needed) */
+      margin: 0; /* Remove default margin */
+      padding: 0; /* Remove default padding */
+      box-sizing: border-box;
+      padding-left: 104px;/* Ensure padding and border are included in the element's total width and height */
+  }
+  
+  .profile-image img {
+      width: 400px;
+      height: 380px;
+      border-radius: 150px;
+      filter: drop-shadow(5px 5px 10px rgb(17, 16, 16));
+      animation: float 2s ease-in-out infinite;
+  }
+  .about-container .btn button{
+      width: 40%;
+      height: 6vh;
+      margin: 150px;
+      background-color: rgb(8, 54, 154);
+      color: rgb(238, 242, 244);
+      border: none;
+      outline: none;
+      font-size: 100%;
+      font-weight: 700;
+      border-radius: 7px;
+      transition: 0.2s linear;
+
+  }
+  .user-info p {
+      margin-bottom: 0.2rem;
+      color: #110e0e;
+      font-size: 1rem;
+      padding-left: 90px;
+      display: flex;
+      text-align: center; 
+  }
+  .user-info h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #0077b6;
+      padding-left: 90px;  
+  }
+  
+  .skills-grid,
+  .services-grid {
+      grid-template-columns: repeat(1, 1fr);
+  }
+
+  .contact-container {
+      padding: 2rem 1rem;
+  }
+
+  .footer-bottom p {
+      padding-left: 20%;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-container .image img {
+      width: 200px;
+      height: 200px;
+  }
+
+  .content h1 {
+      font-size: 1.8rem;
+  }
+
+  .content .typewriter {
+      font-size: 1.2rem;
+  }
+
+  .content p {
+      font-size: 0.9rem;
+  }
+
+  .about-container {
+      padding-left: 2rem 5rem;
+  }
+
+  .profile-image img {
+      width: 180px;
+      height: 210px;
+  }
+
+  .user-info h1 {
+      font-size: 1.3rem;
+  }
+
+  .user-info p {
+      font-size: 0.8rem;
+  }
+
+  .footer-bottom p {
+      padding-left: 90px;
+  }
+}
+
+@media (max-width: 400px) {
+  .main-container .image img {
+      width: 150px;
+      height: 150px;
+  }
+
+  .content h1 {
+      font-size: 1.5rem;
+  }
+
+  .content .typewriter {
+      font-size: 1rem;
+  }
+
+  .content p {
+      font-size: 0.8rem;
+  }
+
+  .about-container {
+      padding: 2rem 1rem;
+  }
+
+  .profile-image img {
+      width: 150px;
+      height: 180px;
+  }
+
+  .user-info h1 {
+      font-size: 1.2rem;
+  }
+
+  .user-info p {
+      font-size: 0.7rem;
+  }
+
+  .footer-bottom p {
+      padding-left: 5%;
+  }
+}
