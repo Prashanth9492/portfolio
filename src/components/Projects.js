@@ -11,6 +11,8 @@ import project1_img6 from "../assets/home6.png";
 import project2_img1 from "../assets/edu.png";  
 import project2_img2 from "../assets/edu.png";  
 import project3_img1 from "../assets/house.png";   
+import project3_img2 from "../assets/house1.png";   
+import project3_img3 from "../assets/house2.png";   
 import project4_img1 from "../assets/shoe1.png";
 import project4_img2 from "../assets/shoe2.png";  
 import project4_img3 from "../assets/shoe3.png";  
@@ -31,7 +33,7 @@ const projectsData = [
     skills: ["React", "JavaScript", "CSS", "HTML"],
     images: [project1_img1, project1_img2, project1_img3, project1_img4, project1_img5, project1_img6],
     github: "https://github.com/Prashanth9492/srkr-homepage",
-    liveDemo: "#",
+    liveDemo: "https://srkr-homepage-demo.vercel.app",
   },
   {
     name: "Free education platform",
@@ -40,16 +42,16 @@ const projectsData = [
     skills: ["React ", "Firebase"],
     images: [project2_img1, project2_img2],
     github: "https://github.com/Prashanth9492/edu",
-    liveDemo: "#",
+    liveDemo: "https://free-edu-platform.vercel.app",
   },
   {
     name: "CSD&CSIT",
     description: "CSD&CSIT Branch house activities portal",
     details: "This portal showcases all CSD & CSIT branch house activities and allows students to track their participation, view earned points, and stay updated on upcoming events and announcements.",
     skills: ["React", "css", "PHP","MYSQL",],
-    images: [project3_img1],
+    images: [project3_img1, project3_img2, project3_img3],
     github: "https://github.com/example/project3",
-    liveDemo: "#",
+    liveDemo: "https://csd-it-house-website-swapanths-projects.vercel.app/",
   },
     {
     name: "Shoecart",
@@ -58,7 +60,7 @@ const projectsData = [
     skills: ["React", "css", "MongoDB",],
     images: [project4_img1, project4_img2, project4_img3, project4_img4, project4_img5, project4_img6, project4_img7],
     github: "https://github.com/example/project3",
-    liveDemo: "#",
+    liveDemo: "https://shoecart-ecommerce.vercel.app",
   },
       {
   name: "NEURO-EMPOWERMENT",
@@ -67,7 +69,7 @@ const projectsData = [
   skills: ["React", "CSS"],
   images: [neuro,neuro1, neuro2, neuro3 ],
   github: "https://github.com/example/project3",
-  liveDemo: "#"
+  liveDemo: "https://nueroempowerment.vercel.app/"
 }
 
 ];
@@ -183,7 +185,12 @@ const Projects = () => {
                   <span key={idx} className="skill-tag">{skill}</span>
                 ))}
               </div>
-              <a href={selectedProject.github} target="_blank" rel="noopener noreferrer" className="btn2">GitHub</a>
+              <div className="modal-buttons">
+                <a href={selectedProject.github} target="_blank" rel="noopener noreferrer" className="btn2">GitHub</a>
+                {selectedProject.liveDemo && selectedProject.liveDemo !== "#" && (
+                  <a href={selectedProject.liveDemo} target="_blank" rel="noopener noreferrer" className="btn2">Live Demo</a>
+                )}
+              </div>
             </div>
           </div>
         )}

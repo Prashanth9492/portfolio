@@ -269,6 +269,16 @@ h3 {
   margin-top: 20px; /* Added to create space above GitHub button */
 }
 
+.modal-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.modal-buttons .btn2 {
+  margin-top: 0; /* Override the individual margin since we're using flex gap */
+}
 
 .btn2 {
   border: 2px solid #6b21a8;
@@ -491,5 +501,14 @@ h3 {
 
   .modal-content .btn2 {
     margin-top: 10px; /* Adjusted for mobile */
+  }
+
+  .modal-buttons {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .modal-buttons .btn2 {
+    margin-top: 0;
   }
 }
