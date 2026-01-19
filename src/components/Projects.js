@@ -23,17 +23,48 @@ import project4_img7 from "../assets/shoe7.png";
 import neuro from "../assets/neuro.png";  
 import neuro1 from "../assets/neuro1.png";  
 import neuro2 from "../assets/neuro2.png";  
-import neuro3 from "../assets/neuro3.png";  
+import neuro3 from "../assets/neuro3.png"; 
+import ai from "../assets/ai.png";  
+import ai1 from "../assets/ai1.png";  
+import ai3 from "../assets/ai3.png"; 
+import kerala1 from "../assets/kerala1.png"; 
+import kerala2 from "../assets/kerala2.png"; 
+import kerala3 from "../assets/kerala3.png"; 
+import kerala4 from "../assets/kerala4.png"; 
 
 const projectsData = [
-  {
-    name: "SRKR Homepage",
-    description: "Collage sample home page design",
-    details: "This project is a modern and responsive homepage design for SRKR College, built to showcase the institution's highlights, departments, and facilities through an engaging and intuitive interface.",
-    skills: ["React", "JavaScript", "CSS", "HTML"],
-    images: [project1_img1, project1_img2, project1_img3, project1_img4, project1_img5, project1_img6],
-    github: "https://github.com/Prashanth9492/srkr-homepage",
-    liveDemo: "https://srkr-homepage-demo.vercel.app",
+
+        {
+  name: "NEURO-EMPOWERMENT",
+  description: "A platform to empower individuals.",
+  details: "NEURO-EMPOWERMENT is a platform designed to empower individuals with neurodiversity by providing a supportive community, resources, and tools to help them thrive. The platform features discussion forums, educational content, and a directory of services tailored to the needs of neurodiverse individuals.",
+  skills: ["React","Typescript", "Taillwind CSS","node.js","firebase",],
+  images: [neuro,neuro1, neuro2, neuro3 ],
+  github: "https://github.com/example/project3",
+  liveDemo: "https://nueroempowerment.vercel.app/",
+},
+
+  
+      {
+  name: "Migrant Worker Health  System",
+  description:  "A Smart India Hackathon solution for migrant workers",
+  details: "A Smart India Hackathon solution for migrant workers’ digital health records, secure document uploads, and verification workflows for Kerala Government.",
+  skills: ["React","Typescript", "Taillwind CSS","node.js","framer motion"],
+  images: [kerala1,kerala2,kerala3,kerala4],
+  github: "https://github.com/mohansiva58/kerala-migrates",
+  liveDemo: "https://safe-kerala.vercel.app/",
+}, 
+
+
+
+    {
+    name: "CSD&CSIT",
+    description: "CSD&CSIT Branch house activities portal",
+    details: "This portal showcases all CSD & CSIT branch house activities and allows students to track their participation, view earned points, and stay updated on upcoming events and announcements.",
+    skills: ["React", "css", "PHP","MYSQL",],
+    images: [project3_img1, project3_img2, project3_img3],
+    github: "https://github.com/example/project3",
+    liveDemo: "https://csd-it-house-website-swapanths-projects.vercel.app/",
   },
   {
     name: "Free education platform",
@@ -44,15 +75,7 @@ const projectsData = [
     github: "https://github.com/Prashanth9492/edu",
     liveDemo: "https://free-edu-platform.vercel.app",
   },
-  {
-    name: "CSD&CSIT",
-    description: "CSD&CSIT Branch house activities portal",
-    details: "This portal showcases all CSD & CSIT branch house activities and allows students to track their participation, view earned points, and stay updated on upcoming events and announcements.",
-    skills: ["React", "css", "PHP","MYSQL",],
-    images: [project3_img1, project3_img2, project3_img3],
-    github: "https://github.com/example/project3",
-    liveDemo: "https://csd-it-house-website-swapanths-projects.vercel.app/",
-  },
+
     {
     name: "Shoecart",
     description: "A modern and responsive e-commerce platform for stylish and affordable footwear.",
@@ -62,15 +85,28 @@ const projectsData = [
     github: "https://github.com/example/project3",
     liveDemo: "https://shoecart-ecommerce.vercel.app",
   },
+
+ 
+  {
+    name: "SRKR Homepage",
+    description: "Collage sample home page design",
+    details: "This project is a modern and responsive homepage design for SRKR College, built to showcase the institution's highlights, departments, and facilities through an engaging and intuitive interface.",
+    skills: ["React", "JavaScript", "CSS", "HTML"],
+    images: [project1_img1, project1_img2, project1_img3, project1_img4, project1_img5, project1_img6],
+    github: "https://github.com/Prashanth9492/srkr-homepage",
+    liveDemo: "https://srkr-homepage-demo.vercel.app",
+  },
+
       {
-  name: "NEURO-EMPOWERMENT",
-  description: "A platform to empower individuals with neurodiversity through community support and resources.",
-  details: "NEURO-EMPOWERMENT is a platform designed to empower individuals with neurodiversity by providing a supportive community, resources, and tools to help them thrive. The platform features discussion forums, educational content, and a directory of services tailored to the needs of neurodiverse individuals.",
-  skills: ["React", "CSS"],
-  images: [neuro,neuro1, neuro2, neuro3 ],
-  github: "https://github.com/example/project3",
-  liveDemo: "https://nueroempowerment.vercel.app/"
-}
+  name: "RAG AI Assistant",
+  description: "A RAG AI Assistant is an intelligent system",
+  details: "A RAG AI Assistant is an intelligent system that answers user questions by first searching for the most relevant information from documents, databases, or files and then generating a clear and meaningful response using AI. Instead of relying only on pre-trained knowledge, it uses real and updated data, which makes the answers more accurate and reliable. It understands the user’s question, finds the right context, and explains the answer in simple language.",
+  skills: ["next.js", "Taillwind","mongoDB","firebase","openAI"],
+  images: [ai,ai1,ai3],
+  github: "hhttps://github.com/Prashanth9492/ai-assistant-t8",
+  liveDemo: "https://v0-personal-ai-assistant-jet-beta.vercel.app/",
+},
+
 
 ];
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import profileImage from '../assets/PP1.JPG';
-import CV from '../assets/Prashanth_resume (2).pdf'; // Adjust the path as needed
+import profileImage from '../assets/photo.jpg';
+import CV from '../assets/Prashanth_resume...pdf'; // Adjust the path as needed
 import './Home.css';
 
 const HeroSection = () => {

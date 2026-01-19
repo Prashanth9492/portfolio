@@ -36,7 +36,7 @@ const About = () => {
 
         <p className="description">
         I’m a passionate B.Tech student and aspiring Full Stack Developer passionate about building seamless digital experiences. 
-        Skilled in <span className="highlight">frontend and backend development</span>, with a focus on creating responsive web applications and user-friendly interfaces.
+        Skilled in <span className="highlight">Full-Stack development</span>, with a focus on creating responsive web applications and user-friendly interfaces.
         </p>
 
 
@@ -93,8 +93,7 @@ const About = () => {
 
         <div className={`more-content ${isExpanded ? "visible" : ""}`}>
           <p className="description">
-            I am a passionate Full Stack Developer with a strong foundation in both frontend and backend technologies. I specialize in building dynamic, responsive, and user-friendly web applications using tools like React, Node.js, MongoDB, and Express. With a love for clean code and a drive to continuously learn, I strive to create impactful digital experiences that solve real-world problems.
-          </p>
+I am a Full Stack Developer with experience in building responsive and user-friendly web applications using React, Node.js, MongoDB, and Express. I enjoy writing clean code and continuously learning to create solutions that solve real-world problems.          </p>
         </div>
       </div>
     </div>
